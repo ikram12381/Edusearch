@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://www.projet-pfm.org/elearning#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#aNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>note moyenne</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_ExpressAPI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>APIs REST avec Express.js</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeveloppementWeb"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#NodeJS"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DevWeb"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_CNNVision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Réseaux de neurones convolutifs (CNN) pour la vision par ordinateur</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeepLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroDeepLearning"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompVisionOrdinateur"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Bennis"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_TransformersLLM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Transformers et modèles de langage</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeepLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#CNNVision"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompLLM"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Benali"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_VueJS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Vue.js : construire des interfaces réactives</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeveloppementWeb"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_WebBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompVueJS"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DevWeb"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_NLPIntro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Introduction au traitement du langage naturel</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#NLP"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroML"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DataEngineeringIntro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Introduction au Data Engineering</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DataScience"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_SQLBases"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DeepLearningPyTorch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Deep learning avancé avec PyTorch (niveau débutant)</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeepLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_AlgebreLineaire"/>
+    <requiertCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompAlgebreLineaire"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_PanoramaIA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Panorama de l'intelligence artificielle</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#IntelligenceArtificielle"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_WebBases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Les bases du développement web</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeveloppementWeb"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompHTML"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DevWeb"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_AWSBases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>AWS pour débutants : les fondamentaux</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Cloud"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_CloudBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompAWS"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_CloudDevOps"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_AzureAdmin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Microsoft Azure : administration et services</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Cloud"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_CloudBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompAzure"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_CloudDevOps"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.3</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompVisionOrdinateur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Vision par ordinateur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_GCPEssentials">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Google Cloud Platform (GCP) essentials</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Cloud"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_CloudBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompGCP"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_CloudDevOps"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_RNNSeriesTemp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Réseaux de neurones récurrents (RNN) et séries temporelles</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeepLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroDeepLearning"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_Terraform">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Infrastructure as Code avec Terraform</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DevOps"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_DockerKubernetes"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompTerraform"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Benali"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_CloudDevOps"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#enseigneCompetence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>enseigne la compétence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_CyberSecuriteBases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Cybersécurité : les fondamentaux</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#CyberSecurite"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_BigDataIntro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Introduction au Big Data</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#BigData"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Idrissi"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.projet-pfm.org/elearning#aNiveau"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Formateur_ElAmrani">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Formateur"/>
+    <rdfs:label>Youssef El Amrani</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#enseignePar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Formateur"/>
+    <rdfs:label>enseigné par</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DataViz">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Visualisation de données avec Python</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DataScience"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_PythonBases"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_CoderPourTous">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Apprendre à coder : les bases</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_EthicalHacking">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Ethical Hacking et tests d'intrusion</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#CyberSecurite"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#SecuriteReseaux"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompEthicalHacking"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_Cybersecurite"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_JSAvance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>JavaScript avancé</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeveloppementWeb"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_WebBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompJavaScript"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DevWeb"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_LLMUsages">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Grands modèles de langage (LLM) : principes et usages</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#NLP"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_NLPIntro"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompLLM"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Benali"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.3</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_NLPSpacyNLTK">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Traitement du langage naturel avec spaCy et NLTK</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#NLP"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_NLPIntro"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_CSSModerne">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>CSS moderne : Flexbox, Grid et responsive design</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeveloppementWeb"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_WebBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompCSS"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DevWeb"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompSpark">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Apache Spark</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompLLM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Modèles de langage (LLM)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_StatsBase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Statistiques fondamentales</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Mathematiques"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompStatistiques"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.3</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CyberSecurite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Cybersécurité</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_ModelisationBD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Modélisation de bases de données relationnelles</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#BasesDeDonnees"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_SQLBases"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DataWrangling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Nettoyage et préparation de données (Data Wrangling)</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DataScience"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_PythonBases"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompTensorFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>TensorFlow / Keras</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Domaine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Domaine</rdfs:label>
+    <rdfs:comment>Un domaine thématique (ex: Data Science, Web, Langues)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_Chatbots">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Chatbots et agents conversationnels</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#NLP"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_NLPIntro"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DLTensorFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Deep Learning avec TensorFlow et Keras</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeepLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroDeepLearning"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompTensorFlow"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Benali"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DataScienceDeAZ">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Data Science avec Python : de A à Z</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DataScience"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Idrissi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_CloudBases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Bases du Cloud Computing</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Cloud"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompCloud"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.3</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_IntroDeepLearning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Introduction au deep learning</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeepLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroML"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompReseauxNeurones"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_MongoDB">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Bases de données NoSQL avec MongoDB</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#BasesDeDonnees"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_SQLBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompNoSQL"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_ApacheSpark">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Apache Spark pour le traitement de données massives</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#BigData"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#BigDataIntro"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompSpark"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompCloud">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Cloud</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Formateur_Bennis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Formateur"/>
+    <rdfs:label>Karim Bennis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_PrepaTOEIC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Préparation au TOEIC</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Langues"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Bennis"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.9</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompOptimisation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Optimisation mathématique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_SecuriteReseaux">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Sécurité des réseaux et pare-feu</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#CyberSecurite"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_CyberSecuriteBases"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Benali"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_Cybersecurite"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_MLScikitLearn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Machine Learning avec Scikit-learn</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#MachineLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroML"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompScikitLearn"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_PythonIntermediaire">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Python intermédiaire : structures de données et POO</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_PythonBases"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Bennis"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_IAGenerative">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>IA générative : principes et applications</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#IntelligenceArtificielle"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroML"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Benali"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Intermediaire">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Niveau"/>
+    <rdfs:label>Intermédiaire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompAnglaisAffaires">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Anglais des affaires</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_EnsembleMethods">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Random Forests et méthodes d'ensemble</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#MachineLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroML"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Bennis"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#appartientADomaine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>appartient au domaine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_PandasNumpy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Pandas et NumPy pour l'analyse de données</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DataScience"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_PythonBases"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Idrissi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#aDuree">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>durée en heures</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_Cryptographie">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Cryptographie appliquée</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#CyberSecurite"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_CyberSecuriteBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompCryptographie"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_Cybersecurite"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_AnglaisTech">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Anglais technique pour l'informatique</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Langues"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Avance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Niveau"/>
+    <rdfs:label>Avancé</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_EthiqueIA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Éthique et IA responsable</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#IntelligenceArtificielle"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cloud">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Cloud</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#requiertCompetence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>requiert la compétence</rdfs:label>
+    <rdfs:comment>Compétence nécessaire en entrée, même si non listée comme prérequis explicite</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#faitPartieDe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Parcours"/>
+    <rdfs:label>fait partie du parcours</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_PythonBases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Python pour débutants</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompPython"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Benali"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DataStorytelling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Storytelling et communication de données</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DataScience"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Bennis"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_ArchitecturesBigData">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Architectures Big Data modernes (Data Lake, Data Warehouse)</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#BigData"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#ApacheSpark"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompDocker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Docker</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#aTitre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>titre</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#DeveloppementWeb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Développement Web</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_NodeJS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Node.js et développement backend JavaScript</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeveloppementWeb"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_JSAvance"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompNodeJS"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DevWeb"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompEthicalHacking">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Ethical Hacking</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_Algorithmique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Algorithmique et structures de données</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_PythonBases"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DockerKubernetes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Docker et Kubernetes en pratique</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DevOps"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_DevOpsIntro"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompDocker"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Parcours_Cybersecurite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Parcours"/>
+    <rdfs:label>Parcours Cybersécurité</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#aNiveau">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Niveau"/>
+    <rdfs:label>a pour niveau</rdfs:label>
+    <rdfs:comment>FunctionalProperty: un cours a EXACTEMENT un seul niveau, jamais deux</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Mathematiques">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Mathématiques</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_OptimisationML">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Optimisation mathématique pour le machine learning</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Mathematiques"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_AlgebreLineaire"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompOptimisation"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b5">
+    <rdf:first rdf:resource="http://www.projet-pfm.org/elearning#Niveau"/>
+    <rdf:rest rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Niveau">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Niveau</rdfs:label>
+    <rdfs:comment>Le niveau de difficulté d'un cours</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_FeatureEngineering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Feature Engineering et sélection de variables</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#MachineLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_IntroML"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_PythonScriptingAvance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Python pour l'automatisation et le scripting avancé</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#PythonIntermediaire"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Debutant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Niveau"/>
+    <rdfs:label>Débutant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_AutomatisationPython">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Automatisation de tâches avec Python</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_PythonBases"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_ReactAvance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>React avancé : hooks et performance</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeveloppementWeb"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_JSAvance"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DevWeb"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompSQL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>SQL</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompNodeJS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Node.js</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompMLOps">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>MLOps</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>Ontologie E-learning pour moteur de recherche hybride</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_CloudNativeServerless">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Architectures cloud natives et serverless</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Cloud"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#AWSBases"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_CloudDevOps"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Parcours">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Parcours</rdfs:label>
+    <rdfs:comment>Une séquence ordonnée de cours menant à un objectif</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b3">
+    <rdf:first rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdf:rest rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompJavaScript">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>JavaScript</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_GitBases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Git et le contrôle de version</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompGit"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_LinuxBases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Introduction à Linux et à la ligne de commande</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompLinux"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_AnglaisAffaires">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Anglais des affaires pour l'IT</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Langues"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_AnglaisTech"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompAnglaisAffaires"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#BasesDeDonnees">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Bases de données</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_StatsAvancees">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Statistiques avancées et inférence</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Mathematiques"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_StatsBase"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.3</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_MLOpsIntro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Machine Learning en production (MLOps)</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#MachineLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#MLScikitLearn"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompMLOps"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_IA"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_IntroML">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Introduction au Machine Learning</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#MachineLearning"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_PythonBases"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_StatsBase"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_ElAmrani"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_Probabilites">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Probabilités appliquées</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Mathematiques"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_StatsBase"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompProbabilites"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Bennis"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.9</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#estGratuit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>est gratuit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#aPrerequis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:label>a pour prérequis</rdfs:label>
+    <owl:inverseOf rdf:resource="http://www.projet-pfm.org/elearning#estPrerequisDe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_AlgebreLineaire">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Algèbre linéaire appliquée</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Mathematiques"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompAlgebreLineaire"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompNoSQL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>NoSQL / MongoDB</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_SQLBases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Les bases de SQL</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Debutant"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#BasesDeDonnees"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompSQL"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompTerraform">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Terraform (Infra as Code)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompAWS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>AWS</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.projet-pfm.org/elearning#appartientADomaine"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_PostgresAvance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Administration et optimisation PostgreSQL</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#BasesDeDonnees"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_SQLBases"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompPostgres"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.9</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompCSS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>CSS moderne</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompReseauxNeurones">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Réseaux de neurones</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_CalculDiffIntegral">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Calcul différentiel et intégral pour la data science</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#Mathematiques"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_StatsBase"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DataScientist"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompLinux">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Linux / ligne de commande</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#DataScience">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Data Science</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_Monitoring">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Monitoring et observabilité des systèmes</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DevOps"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_DockerKubernetes"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompMonitoring"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Idrissi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_CloudDevOps"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompGit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Git</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_MERNStack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Développement full-stack avec le stack MERN</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Avance"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DeveloppementWeb"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#NodeJS"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_DevWeb"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.6</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompGCP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Google Cloud Platform</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompPython">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Python</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#DevOps">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>DevOps</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#Informatique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompCryptographie">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Cryptographie</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompScikitLearn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Scikit-learn</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompPostgres">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>PostgreSQL avancé</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b2">
+    <rdf:first rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdf:rest rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#BigData">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Big Data</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#DataScience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompProbabilites">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Probabilités</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Formateur_Benali">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Formateur"/>
+    <rdfs:label>Aïcha Benali</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompAzure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Microsoft Azure</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Parcours_DevWeb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Parcours"/>
+    <rdfs:label>Parcours Développeur Web</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Formateur_Idrissi">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Formateur"/>
+    <rdfs:label>Sara Idrissi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b4">
+    <rdf:first rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdf:rest rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Cours</rdfs:label>
+    <rdfs:comment>Un cours en ligne proposé sur la plateforme</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b8"/>
+    <rdfs:subClassOf rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_CICD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Intégration continue et déploiement continu (CI/CD)</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DevOps"/>
+    <aPrerequis rdf:resource="http://www.projet-pfm.org/elearning#Cours_DevOpsIntro"/>
+    <enseigneCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompCICD"/>
+    <enseignePar rdf:resource="http://www.projet-pfm.org/elearning#Formateur_Chraibi"/>
+    <faitPartieDe rdf:resource="http://www.projet-pfm.org/elearning#Parcours_CloudDevOps"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.3</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompVueJS">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Vue.js</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompAlgebreLineaire">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Algèbre linéaire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompHTML">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>HTML/CSS</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Parcours_IA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Parcours"/>
+    <rdfs:label>Parcours Intelligence Artificielle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#NLP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Traitement du langage naturel</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#IntelligenceArtificielle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Cours_DevOpsIntro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <aTitre>Introduction au DevOps</aTitre>
+    <aNiveau rdf:resource="http://www.projet-pfm.org/elearning#Intermediaire"/>
+    <appartientADomaine rdf:resource="http://www.projet-pfm.org/elearning#DevOps"/>
+    <requiertCompetence rdf:resource="http://www.projet-pfm.org/elearning#CompPython"/>
+    <aDuree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</aDuree>
+    <aNote rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</aNote>
+    <estGratuit rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estGratuit>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#estPrerequisDe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Cours"/>
+    <rdfs:label>est prérequis de</rdfs:label>
+    <rdfs:comment>Relation inverse de aPrerequis, déduite automatiquement par le raisonneur</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Formateur">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Formateur</rdfs:label>
+    <rdfs:comment>La personne ou organisme qui dispense le cours</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#sousDomaineDe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:range rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>sous-domaine de</rdfs:label>
+    <rdfs:comment>TransitiveProperty: si DeepLearning sousDomaineDe MachineLearning et MachineLearning sousDomaineDe IA, alors le raisonneur déduit automatiquement DeepLearning sousDomaineDe IA</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompCICD">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>CI/CD</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Informatique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Informatique</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Langues">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Langues</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Parcours_DataScientist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Parcours"/>
+    <rdfs:label>Parcours Data Scientist</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompStatistiques">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Statistiques</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#DeepLearning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Deep Learning</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#MachineLearning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Parcours_CloudDevOps">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Parcours"/>
+    <rdfs:label>Parcours Cloud &amp; DevOps</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b6">
+    <rdf:first rdf:resource="http://www.projet-pfm.org/elearning#Formateur"/>
+    <rdf:rest rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Formateur_Chraibi">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Formateur"/>
+    <rdfs:label>Nadia Chraibi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#IntelligenceArtificielle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Intelligence Artificielle</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#DataScience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#MachineLearning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Domaine"/>
+    <rdfs:label>Machine Learning</rdfs:label>
+    <sousDomaineDe rdf:resource="http://www.projet-pfm.org/elearning#IntelligenceArtificielle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#CompMonitoring">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.projet-pfm.org/elearning#Competence"/>
+    <rdfs:label>Monitoring &amp; observabilité</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.projet-pfm.org/elearning#Competence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Compétence</rdfs:label>
+    <rdfs:comment>Une compétence enseignée ou requise par un cours</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5a2f9e47d5eb470aa8bbd8b5c06a0993b7">
+    <rdf:first rdf:resource="http://www.projet-pfm.org/elearning#Parcours"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

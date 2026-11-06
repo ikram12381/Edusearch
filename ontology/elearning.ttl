@@ -1,0 +1,1036 @@
+@prefix : <http://www.projet-pfm.org/elearning#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+#  ONTOLOGIE E-LEARNING (version complète OWL)
+#  A importer dans Protege (fichier > ouvrir > choisir ce .ttl)
+#################################################################
+
+<http://www.projet-pfm.org/elearning> a owl:Ontology ;
+    rdfs:label "Ontologie E-learning pour moteur de recherche hybride" .
+
+#################################################################
+#  CLASSES
+#################################################################
+
+:Cours a owl:Class ;
+    rdfs:label "Cours" ;
+    rdfs:comment "Un cours en ligne proposé sur la plateforme" .
+
+:Competence a owl:Class ;
+    rdfs:label "Compétence" ;
+    rdfs:comment "Une compétence enseignée ou requise par un cours" .
+
+:Domaine a owl:Class ;
+    rdfs:label "Domaine" ;
+    rdfs:comment "Un domaine thématique (ex: Data Science, Web, Langues)" .
+
+:Niveau a owl:Class ;
+    rdfs:label "Niveau" ;
+    rdfs:comment "Le niveau de difficulté d'un cours" .
+
+:Formateur a owl:Class ;
+    rdfs:label "Formateur" ;
+    rdfs:comment "La personne ou organisme qui dispense le cours" .
+
+:Parcours a owl:Class ;
+    rdfs:label "Parcours" ;
+    rdfs:comment "Une séquence ordonnée de cours menant à un objectif" .
+
+# --- Classes disjointes ---
+# On déclare explicitement qu'une instance ne peut PAS appartenir
+# à deux de ces classes en même temps (ex: un Cours ne peut pas
+# être aussi une Competence). C'est une contrainte logique OWL,
+# pas juste une convention.
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Cours :Competence :Domaine :Niveau :Formateur :Parcours ) .
+
+#################################################################
+#  PROPRIETES D'OBJET (relations entre instances)
+#################################################################
+
+:aPrerequis a owl:ObjectProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range :Cours ;
+    rdfs:label "a pour prérequis" ;
+    owl:inverseOf :estPrerequisDe .
+
+:estPrerequisDe a owl:ObjectProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range :Cours ;
+    rdfs:label "est prérequis de" ;
+    rdfs:comment "Relation inverse de aPrerequis, déduite automatiquement par le raisonneur" .
+
+:enseigneCompetence a owl:ObjectProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range :Competence ;
+    rdfs:label "enseigne la compétence" .
+
+:requiertCompetence a owl:ObjectProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range :Competence ;
+    rdfs:label "requiert la compétence" ;
+    rdfs:comment "Compétence nécessaire en entrée, même si non listée comme prérequis explicite" .
+
+:appartientADomaine a owl:ObjectProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range :Domaine ;
+    rdfs:label "appartient au domaine" .
+
+:aNiveau a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range :Niveau ;
+    rdfs:label "a pour niveau" ;
+    rdfs:comment "FunctionalProperty: un cours a EXACTEMENT un seul niveau, jamais deux" .
+
+:enseignePar a owl:ObjectProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range :Formateur ;
+    rdfs:label "enseigné par" .
+
+:faitPartieDe a owl:ObjectProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range :Parcours ;
+    rdfs:label "fait partie du parcours" .
+
+:sousDomaineDe a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain :Domaine ;
+    rdfs:range :Domaine ;
+    rdfs:label "sous-domaine de" ;
+    rdfs:comment "TransitiveProperty: si DeepLearning sousDomaineDe MachineLearning et MachineLearning sousDomaineDe IA, alors le raisonneur déduit automatiquement DeepLearning sousDomaineDe IA" .
+
+#################################################################
+#  PROPRIETES DE DONNEES (valeurs simples)
+#################################################################
+
+:aDuree a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range xsd:integer ;
+    rdfs:label "durée en heures" .
+
+:aNote a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range xsd:float ;
+    rdfs:label "note moyenne" .
+
+:estGratuit a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "est gratuit" .
+
+:aTitre a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Cours ;
+    rdfs:range xsd:string ;
+    rdfs:label "titre" .
+
+#################################################################
+#  RESTRICTIONS DE CARDINALITE SUR :Cours
+#  On renforce la définition de la classe Cours avec des règles
+#  logiques que doit respecter toute instance de ce type.
+#################################################################
+
+:Cours rdfs:subClassOf
+    [ a owl:Restriction ;
+      owl:onProperty :aNiveau ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ] ,
+    [ a owl:Restriction ;
+      owl:onProperty :appartientADomaine ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ] .
+# Traduction: tout Cours doit avoir EXACTEMENT 1 niveau,
+# et AU MOINS 1 domaine. Un raisonneur OWL (ex: HermiT dans Protégé)
+# peut vérifier automatiquement qu'aucune instance ne viole ces règles.
+
+#################################################################
+#  INSTANCES - NIVEAUX
+#################################################################
+
+:Debutant a owl:NamedIndividual, :Niveau ; rdfs:label "Débutant" .
+:Intermediaire a owl:NamedIndividual, :Niveau ; rdfs:label "Intermédiaire" .
+:Avance a owl:NamedIndividual, :Niveau ; rdfs:label "Avancé" .
+
+#################################################################
+#  INSTANCES - DOMAINES (avec hiérarchie transitive)
+#################################################################
+
+:Informatique a owl:NamedIndividual, :Domaine ; rdfs:label "Informatique" .
+
+:DataScience a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Data Science" ;
+    :sousDomaineDe :Informatique .
+
+:IntelligenceArtificielle a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Intelligence Artificielle" ;
+    :sousDomaineDe :DataScience .
+
+:MachineLearning a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Machine Learning" ;
+    :sousDomaineDe :IntelligenceArtificielle .
+
+:DeepLearning a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Deep Learning" ;
+    :sousDomaineDe :MachineLearning .
+# Grâce à owl:TransitiveProperty déclaré plus haut, un raisonneur
+# déduit automatiquement: DeepLearning sousDomaineDe Informatique
+# (sans qu'on l'ait écrit explicitement)
+
+:DeveloppementWeb a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Développement Web" ;
+    :sousDomaineDe :Informatique .
+
+:Mathematiques a owl:NamedIndividual, :Domaine ; rdfs:label "Mathématiques" .
+
+:Cloud a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Cloud" ;
+    :sousDomaineDe :Informatique .
+
+:DevOps a owl:NamedIndividual, :Domaine ;
+    rdfs:label "DevOps" ;
+    :sousDomaineDe :Informatique .
+
+:BasesDeDonnees a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Bases de données" ;
+    :sousDomaineDe :Informatique .
+
+:NLP a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Traitement du langage naturel" ;
+    :sousDomaineDe :IntelligenceArtificielle .
+
+:CyberSecurite a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Cybersécurité" ;
+    :sousDomaineDe :Informatique .
+
+:Langues a owl:NamedIndividual, :Domaine ; rdfs:label "Langues" .
+
+#################################################################
+#  INSTANCES - COMPETENCES
+#################################################################
+
+:CompPython a owl:NamedIndividual, :Competence ; rdfs:label "Python" .
+:CompAlgebreLineaire a owl:NamedIndividual, :Competence ; rdfs:label "Algèbre linéaire" .
+:CompStatistiques a owl:NamedIndividual, :Competence ; rdfs:label "Statistiques" .
+:CompReseauxNeurones a owl:NamedIndividual, :Competence ; rdfs:label "Réseaux de neurones" .
+:CompHTML a owl:NamedIndividual, :Competence ; rdfs:label "HTML/CSS" .
+:CompJavaScript a owl:NamedIndividual, :Competence ; rdfs:label "JavaScript" .
+:CompSQL a owl:NamedIndividual, :Competence ; rdfs:label "SQL" .
+:CompDocker a owl:NamedIndividual, :Competence ; rdfs:label "Docker" .
+:CompGit a owl:NamedIndividual, :Competence ; rdfs:label "Git" .
+
+# --- Cas volontaire d'AMBIGUÏTÉ pour démontrer la désambiguïsation ---
+# "Cloud" existe à la fois comme Domaine (thématique de cours) et comme
+# Competence (savoir-faire enseigné). graph_service.link_entities_in_query()
+# détecte les deux interprétations et documente la résolution retenue.
+:CompCloud a owl:NamedIndividual, :Competence ; rdfs:label "Cloud" .
+
+#################################################################
+#  INSTANCES - FORMATEURS
+#################################################################
+
+:Formateur_Benali a owl:NamedIndividual, :Formateur ; rdfs:label "Aïcha Benali" .
+:Formateur_ElAmrani a owl:NamedIndividual, :Formateur ; rdfs:label "Youssef El Amrani" .
+
+#################################################################
+#  INSTANCES - PARCOURS
+#################################################################
+
+:Parcours_DataScientist a owl:NamedIndividual, :Parcours ;
+    rdfs:label "Parcours Data Scientist" .
+
+:Parcours_DevWeb a owl:NamedIndividual, :Parcours ;
+    rdfs:label "Parcours Développeur Web" .
+
+#################################################################
+#  INSTANCES - COURS
+#################################################################
+
+:Cours_PythonBases a owl:NamedIndividual, :Cours ;
+    :aTitre "Python pour débutants" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Informatique ;
+    :enseigneCompetence :CompPython ;
+    :enseignePar :Formateur_Benali ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 15 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_StatsBase a owl:NamedIndividual, :Cours ;
+    :aTitre "Statistiques fondamentales" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Mathematiques ;
+    :enseigneCompetence :CompStatistiques ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 10 ;
+    :aNote "4.3"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_AlgebreLineaire a owl:NamedIndividual, :Cours ;
+    :aTitre "Algèbre linéaire appliquée" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :Mathematiques ;
+    :enseigneCompetence :CompAlgebreLineaire ;
+    :aDuree 12 ;
+    :aNote "4.1"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_IntroML a owl:NamedIndividual, :Cours ;
+    :aTitre "Introduction au Machine Learning" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :MachineLearning ;
+    :aPrerequis :Cours_PythonBases ;
+    :aPrerequis :Cours_StatsBase ;
+    :enseignePar :Formateur_ElAmrani ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 20 ;
+    :aNote "4.7"^^xsd:float ;
+    :estGratuit false .
+# Grâce à owl:inverseOf déclaré plus haut, un raisonneur déduit
+# automatiquement: Cours_PythonBases estPrerequisDe Cours_IntroML
+
+:Cours_IntroDeepLearning a owl:NamedIndividual, :Cours ;
+    :aTitre "Introduction au deep learning" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :DeepLearning ;
+    :aPrerequis :Cours_IntroML ;
+    :enseigneCompetence :CompReseauxNeurones ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 18 ;
+    :aNote "4.8"^^xsd:float ;
+    :estGratuit false .
+
+# Cas piège volontaire pour la démo : titre dit "débutant" mais
+# requiert en réalité l'algèbre linéaire (prérequis caché)
+:Cours_DeepLearningPyTorch a owl:NamedIndividual, :Cours ;
+    :aTitre "Deep learning avancé avec PyTorch (niveau débutant)" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :DeepLearning ;
+    :aPrerequis :Cours_AlgebreLineaire ;
+    :requiertCompetence :CompAlgebreLineaire ;
+    :aDuree 25 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_WebBases a owl:NamedIndividual, :Cours ;
+    :aTitre "Les bases du développement web" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :DeveloppementWeb ;
+    :enseigneCompetence :CompHTML ;
+    :faitPartieDe :Parcours_DevWeb ;
+    :aDuree 14 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_JSAvance a owl:NamedIndividual, :Cours ;
+    :aTitre "JavaScript avancé" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :DeveloppementWeb ;
+    :aPrerequis :Cours_WebBases ;
+    :enseigneCompetence :CompJavaScript ;
+    :faitPartieDe :Parcours_DevWeb ;
+    :aDuree 22 ;
+    :aNote "4.2"^^xsd:float ;
+    :estGratuit false .
+
+#################################################################
+#  NOUVEAUX COURS (ajoutés pour étoffer le dataset et couvrir
+#  davantage de domaines/scénarios de démonstration)
+#################################################################
+
+:Cours_CloudBases a owl:NamedIndividual, :Cours ;
+    :aTitre "Bases du Cloud Computing" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Cloud ;
+    :enseigneCompetence :CompCloud ;
+    :aDuree 12 ;
+    :aNote "4.3"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_DevOpsIntro a owl:NamedIndividual, :Cours ;
+    :aTitre "Introduction au DevOps" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DevOps ;
+    :requiertCompetence :CompPython ;
+    :aDuree 16 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_DockerKubernetes a owl:NamedIndividual, :Cours ;
+    :aTitre "Docker et Kubernetes en pratique" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :DevOps ;
+    :aPrerequis :Cours_DevOpsIntro ;
+    :enseigneCompetence :CompDocker ;
+    :aDuree 20 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_SQLBases a owl:NamedIndividual, :Cours ;
+    :aTitre "Les bases de SQL" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :BasesDeDonnees ;
+    :enseigneCompetence :CompSQL ;
+    :aDuree 10 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_NLPIntro a owl:NamedIndividual, :Cours ;
+    :aTitre "Introduction au traitement du langage naturel" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :NLP ;
+    :aPrerequis :Cours_IntroML ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 16 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_CyberSecuriteBases a owl:NamedIndividual, :Cours ;
+    :aTitre "Cybersécurité : les fondamentaux" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :CyberSecurite ;
+    :aDuree 12 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_AnglaisTech a owl:NamedIndividual, :Cours ;
+    :aTitre "Anglais technique pour l'informatique" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Langues ;
+    :aDuree 8 ;
+    :aNote "4.2"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_GitBases a owl:NamedIndividual, :Cours ;
+    :aTitre "Git et le contrôle de version" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Informatique ;
+    :enseigneCompetence :CompGit ;
+    :aDuree 6 ;
+    :aNote "4.7"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_ReactAvance a owl:NamedIndividual, :Cours ;
+    :aTitre "React avancé : hooks et performance" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :DeveloppementWeb ;
+    :aPrerequis :Cours_JSAvance ;
+    :faitPartieDe :Parcours_DevWeb ;
+    :aDuree 18 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_CoderPourTous a owl:NamedIndividual, :Cours ;
+    :aTitre "Apprendre à coder : les bases" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Informatique ;
+    :aDuree 8 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_DataViz a owl:NamedIndividual, :Cours ;
+    :aTitre "Visualisation de données avec Python" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DataScience ;
+    :aPrerequis :Cours_PythonBases ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 9 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_StatsAvancees a owl:NamedIndividual, :Cours ;
+    :aTitre "Statistiques avancées et inférence" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :Mathematiques ;
+    :aPrerequis :Cours_StatsBase ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 14 ;
+    :aNote "4.3"^^xsd:float ;
+    :estGratuit false .
+
+
+#################################################################
+#  EXTENSION DU DATASET (généré par backend/generate_dataset.py)
+#  Nouveau domaine, nouvelles compétences/formateurs/parcours,
+#  et nouveaux cours -- mêmes doc_id que dans cours.json.
+#################################################################
+:BigData a owl:NamedIndividual, :Domaine ;
+    rdfs:label "Big Data" ;
+    :sousDomaineDe :DataScience .
+
+# --- Nouvelles compétences ---
+:CompScikitLearn a owl:NamedIndividual, :Competence ; rdfs:label "Scikit-learn" .
+:CompTensorFlow a owl:NamedIndividual, :Competence ; rdfs:label "TensorFlow / Keras" .
+:CompSpark a owl:NamedIndividual, :Competence ; rdfs:label "Apache Spark" .
+:CompNoSQL a owl:NamedIndividual, :Competence ; rdfs:label "NoSQL / MongoDB" .
+:CompPostgres a owl:NamedIndividual, :Competence ; rdfs:label "PostgreSQL avancé" .
+:CompLinux a owl:NamedIndividual, :Competence ; rdfs:label "Linux / ligne de commande" .
+:CompNodeJS a owl:NamedIndividual, :Competence ; rdfs:label "Node.js" .
+:CompVueJS a owl:NamedIndividual, :Competence ; rdfs:label "Vue.js" .
+:CompCSS a owl:NamedIndividual, :Competence ; rdfs:label "CSS moderne" .
+:CompTerraform a owl:NamedIndividual, :Competence ; rdfs:label "Terraform (Infra as Code)" .
+:CompCICD a owl:NamedIndividual, :Competence ; rdfs:label "CI/CD" .
+:CompMonitoring a owl:NamedIndividual, :Competence ; rdfs:label "Monitoring & observabilité" .
+:CompCryptographie a owl:NamedIndividual, :Competence ; rdfs:label "Cryptographie" .
+:CompEthicalHacking a owl:NamedIndividual, :Competence ; rdfs:label "Ethical Hacking" .
+:CompAWS a owl:NamedIndividual, :Competence ; rdfs:label "AWS" .
+:CompAzure a owl:NamedIndividual, :Competence ; rdfs:label "Microsoft Azure" .
+:CompGCP a owl:NamedIndividual, :Competence ; rdfs:label "Google Cloud Platform" .
+:CompAnglaisAffaires a owl:NamedIndividual, :Competence ; rdfs:label "Anglais des affaires" .
+:CompProbabilites a owl:NamedIndividual, :Competence ; rdfs:label "Probabilités" .
+:CompOptimisation a owl:NamedIndividual, :Competence ; rdfs:label "Optimisation mathématique" .
+:CompVisionOrdinateur a owl:NamedIndividual, :Competence ; rdfs:label "Vision par ordinateur" .
+:CompLLM a owl:NamedIndividual, :Competence ; rdfs:label "Modèles de langage (LLM)" .
+:CompMLOps a owl:NamedIndividual, :Competence ; rdfs:label "MLOps" .
+
+# --- Nouveaux formateurs ---
+:Formateur_Idrissi a owl:NamedIndividual, :Formateur ; rdfs:label "Sara Idrissi" .
+:Formateur_Bennis a owl:NamedIndividual, :Formateur ; rdfs:label "Karim Bennis" .
+:Formateur_Chraibi a owl:NamedIndividual, :Formateur ; rdfs:label "Nadia Chraibi" .
+
+# --- Nouveaux parcours ---
+:Parcours_IA a owl:NamedIndividual, :Parcours ; rdfs:label "Parcours Intelligence Artificielle" .
+:Parcours_CloudDevOps a owl:NamedIndividual, :Parcours ; rdfs:label "Parcours Cloud & DevOps" .
+:Parcours_Cybersecurite a owl:NamedIndividual, :Parcours ; rdfs:label "Parcours Cybersécurité" .
+
+# --- Nouveaux cours ---
+:Cours_PythonIntermediaire a owl:NamedIndividual, :Cours ;
+    :aTitre "Python intermédiaire : structures de données et POO" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :Informatique ;
+    :aPrerequis :Cours_PythonBases ;
+    :enseignePar :Formateur_Bennis ;
+    :aDuree 14 ;
+    :aNote "4.2"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_AutomatisationPython a owl:NamedIndividual, :Cours ;
+    :aTitre "Automatisation de tâches avec Python" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :Informatique ;
+    :aPrerequis :Cours_PythonBases ;
+    :aDuree 10 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_Algorithmique a owl:NamedIndividual, :Cours ;
+    :aTitre "Algorithmique et structures de données" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :Informatique ;
+    :aPrerequis :Cours_PythonBases ;
+    :enseignePar :Formateur_ElAmrani ;
+    :aDuree 16 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_LinuxBases a owl:NamedIndividual, :Cours ;
+    :aTitre "Introduction à Linux et à la ligne de commande" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Informatique ;
+    :enseigneCompetence :CompLinux ;
+    :aDuree 8 ;
+    :aNote "4.7"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_PythonScriptingAvance a owl:NamedIndividual, :Cours ;
+    :aTitre "Python pour l'automatisation et le scripting avancé" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :Informatique ;
+    :aPrerequis :PythonIntermediaire ;
+    :aDuree 16 ;
+    :aNote "4.0"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_DataScienceDeAZ a owl:NamedIndividual, :Cours ;
+    :aTitre "Data Science avec Python : de A à Z" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :DataScience ;
+    :enseignePar :Formateur_Idrissi ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 18 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_DataWrangling a owl:NamedIndividual, :Cours ;
+    :aTitre "Nettoyage et préparation de données (Data Wrangling)" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DataScience ;
+    :aPrerequis :Cours_PythonBases ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 12 ;
+    :aNote "4.8"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_PandasNumpy a owl:NamedIndividual, :Cours ;
+    :aTitre "Pandas et NumPy pour l'analyse de données" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DataScience ;
+    :aPrerequis :Cours_PythonBases ;
+    :enseignePar :Formateur_Idrissi ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 11 ;
+    :aNote "4.2"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_DataStorytelling a owl:NamedIndividual, :Cours ;
+    :aTitre "Storytelling et communication de données" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DataScience ;
+    :enseignePar :Formateur_Bennis ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 8 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_DataEngineeringIntro a owl:NamedIndividual, :Cours ;
+    :aTitre "Introduction au Data Engineering" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DataScience ;
+    :aPrerequis :Cours_SQLBases ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 14 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_BigDataIntro a owl:NamedIndividual, :Cours ;
+    :aTitre "Introduction au Big Data" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :BigData ;
+    :enseignePar :Formateur_Idrissi ;
+    :aDuree 10 ;
+    :aNote "4.1"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_ApacheSpark a owl:NamedIndividual, :Cours ;
+    :aTitre "Apache Spark pour le traitement de données massives" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :BigData ;
+    :aPrerequis :BigDataIntro ;
+    :enseigneCompetence :CompSpark ;
+    :enseignePar :Formateur_Chraibi ;
+    :aDuree 16 ;
+    :aNote "4.2"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_ArchitecturesBigData a owl:NamedIndividual, :Cours ;
+    :aTitre "Architectures Big Data modernes (Data Lake, Data Warehouse)" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :BigData ;
+    :aPrerequis :ApacheSpark ;
+    :enseignePar :Formateur_Chraibi ;
+    :aDuree 18 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_PanoramaIA a owl:NamedIndividual, :Cours ;
+    :aTitre "Panorama de l'intelligence artificielle" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :IntelligenceArtificielle ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 8 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_EthiqueIA a owl:NamedIndividual, :Cours ;
+    :aTitre "Éthique et IA responsable" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :IntelligenceArtificielle ;
+    :enseignePar :Formateur_ElAmrani ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 6 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_IAGenerative a owl:NamedIndividual, :Cours ;
+    :aTitre "IA générative : principes et applications" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :IntelligenceArtificielle ;
+    :aPrerequis :Cours_IntroML ;
+    :enseignePar :Formateur_Benali ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 12 ;
+    :aNote "4.8"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_MLScikitLearn a owl:NamedIndividual, :Cours ;
+    :aTitre "Machine Learning avec Scikit-learn" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :MachineLearning ;
+    :aPrerequis :Cours_IntroML ;
+    :enseigneCompetence :CompScikitLearn ;
+    :enseignePar :Formateur_ElAmrani ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 16 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_FeatureEngineering a owl:NamedIndividual, :Cours ;
+    :aTitre "Feature Engineering et sélection de variables" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :MachineLearning ;
+    :aPrerequis :Cours_IntroML ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 10 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_MLOpsIntro a owl:NamedIndividual, :Cours ;
+    :aTitre "Machine Learning en production (MLOps)" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :MachineLearning ;
+    :aPrerequis :MLScikitLearn ;
+    :enseigneCompetence :CompMLOps ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 18 ;
+    :aNote "4.1"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_EnsembleMethods a owl:NamedIndividual, :Cours ;
+    :aTitre "Random Forests et méthodes d'ensemble" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :MachineLearning ;
+    :aPrerequis :Cours_IntroML ;
+    :enseignePar :Formateur_Bennis ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 10 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_CNNVision a owl:NamedIndividual, :Cours ;
+    :aTitre "Réseaux de neurones convolutifs (CNN) pour la vision par ordinateur" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DeepLearning ;
+    :aPrerequis :Cours_IntroDeepLearning ;
+    :enseigneCompetence :CompVisionOrdinateur ;
+    :enseignePar :Formateur_Bennis ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 16 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_RNNSeriesTemp a owl:NamedIndividual, :Cours ;
+    :aTitre "Réseaux de neurones récurrents (RNN) et séries temporelles" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DeepLearning ;
+    :aPrerequis :Cours_IntroDeepLearning ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 14 ;
+    :aNote "4.8"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_DLTensorFlow a owl:NamedIndividual, :Cours ;
+    :aTitre "Deep Learning avec TensorFlow et Keras" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DeepLearning ;
+    :aPrerequis :Cours_IntroDeepLearning ;
+    :enseigneCompetence :CompTensorFlow ;
+    :enseignePar :Formateur_Benali ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 18 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_TransformersLLM a owl:NamedIndividual, :Cours ;
+    :aTitre "Transformers et modèles de langage" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :DeepLearning ;
+    :aPrerequis :CNNVision ;
+    :enseigneCompetence :CompLLM ;
+    :enseignePar :Formateur_Benali ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 20 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_NLPSpacyNLTK a owl:NamedIndividual, :Cours ;
+    :aTitre "Traitement du langage naturel avec spaCy et NLTK" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :NLP ;
+    :aPrerequis :Cours_NLPIntro ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 12 ;
+    :aNote "4.7"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_Chatbots a owl:NamedIndividual, :Cours ;
+    :aTitre "Chatbots et agents conversationnels" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :NLP ;
+    :aPrerequis :Cours_NLPIntro ;
+    :aDuree 10 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_LLMUsages a owl:NamedIndividual, :Cours ;
+    :aTitre "Grands modèles de langage (LLM) : principes et usages" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :NLP ;
+    :aPrerequis :Cours_NLPIntro ;
+    :enseigneCompetence :CompLLM ;
+    :enseignePar :Formateur_Benali ;
+    :faitPartieDe :Parcours_IA ;
+    :aDuree 14 ;
+    :aNote "4.3"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_CSSModerne a owl:NamedIndividual, :Cours ;
+    :aTitre "CSS moderne : Flexbox, Grid et responsive design" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :DeveloppementWeb ;
+    :aPrerequis :Cours_WebBases ;
+    :enseigneCompetence :CompCSS ;
+    :enseignePar :Formateur_ElAmrani ;
+    :faitPartieDe :Parcours_DevWeb ;
+    :aDuree 8 ;
+    :aNote "4.4"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_NodeJS a owl:NamedIndividual, :Cours ;
+    :aTitre "Node.js et développement backend JavaScript" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DeveloppementWeb ;
+    :aPrerequis :Cours_JSAvance ;
+    :enseigneCompetence :CompNodeJS ;
+    :faitPartieDe :Parcours_DevWeb ;
+    :aDuree 16 ;
+    :aNote "4.2"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_VueJS a owl:NamedIndividual, :Cours ;
+    :aTitre "Vue.js : construire des interfaces réactives" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DeveloppementWeb ;
+    :aPrerequis :Cours_WebBases ;
+    :enseigneCompetence :CompVueJS ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_DevWeb ;
+    :aDuree 14 ;
+    :aNote "4.7"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_ExpressAPI a owl:NamedIndividual, :Cours ;
+    :aTitre "APIs REST avec Express.js" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DeveloppementWeb ;
+    :aPrerequis :NodeJS ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_DevWeb ;
+    :aDuree 12 ;
+    :aNote "4.8"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_MERNStack a owl:NamedIndividual, :Cours ;
+    :aTitre "Développement full-stack avec le stack MERN" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :DeveloppementWeb ;
+    :aPrerequis :NodeJS ;
+    :faitPartieDe :Parcours_DevWeb ;
+    :aDuree 24 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_AWSBases a owl:NamedIndividual, :Cours ;
+    :aTitre "AWS pour débutants : les fondamentaux" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Cloud ;
+    :aPrerequis :Cours_CloudBases ;
+    :enseigneCompetence :CompAWS ;
+    :faitPartieDe :Parcours_CloudDevOps ;
+    :aDuree 12 ;
+    :aNote "4.6"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_AzureAdmin a owl:NamedIndividual, :Cours ;
+    :aTitre "Microsoft Azure : administration et services" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :Cloud ;
+    :aPrerequis :Cours_CloudBases ;
+    :enseigneCompetence :CompAzure ;
+    :enseignePar :Formateur_ElAmrani ;
+    :faitPartieDe :Parcours_CloudDevOps ;
+    :aDuree 14 ;
+    :aNote "4.3"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_GCPEssentials a owl:NamedIndividual, :Cours ;
+    :aTitre "Google Cloud Platform (GCP) essentials" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Cloud ;
+    :aPrerequis :Cours_CloudBases ;
+    :enseigneCompetence :CompGCP ;
+    :enseignePar :Formateur_ElAmrani ;
+    :faitPartieDe :Parcours_CloudDevOps ;
+    :aDuree 10 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_CloudNativeServerless a owl:NamedIndividual, :Cours ;
+    :aTitre "Architectures cloud natives et serverless" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :Cloud ;
+    :aPrerequis :AWSBases ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_CloudDevOps ;
+    :aDuree 16 ;
+    :aNote "4.8"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_CICD a owl:NamedIndividual, :Cours ;
+    :aTitre "Intégration continue et déploiement continu (CI/CD)" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :DevOps ;
+    :aPrerequis :Cours_DevOpsIntro ;
+    :enseigneCompetence :CompCICD ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_CloudDevOps ;
+    :aDuree 12 ;
+    :aNote "4.3"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_Terraform a owl:NamedIndividual, :Cours ;
+    :aTitre "Infrastructure as Code avec Terraform" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :DevOps ;
+    :aPrerequis :Cours_DockerKubernetes ;
+    :enseigneCompetence :CompTerraform ;
+    :enseignePar :Formateur_Benali ;
+    :faitPartieDe :Parcours_CloudDevOps ;
+    :aDuree 14 ;
+    :aNote "4.1"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_Monitoring a owl:NamedIndividual, :Cours ;
+    :aTitre "Monitoring et observabilité des systèmes" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :DevOps ;
+    :aPrerequis :Cours_DockerKubernetes ;
+    :enseigneCompetence :CompMonitoring ;
+    :enseignePar :Formateur_Idrissi ;
+    :faitPartieDe :Parcours_CloudDevOps ;
+    :aDuree 12 ;
+    :aNote "4.8"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_MongoDB a owl:NamedIndividual, :Cours ;
+    :aTitre "Bases de données NoSQL avec MongoDB" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :BasesDeDonnees ;
+    :aPrerequis :Cours_SQLBases ;
+    :enseigneCompetence :CompNoSQL ;
+    :aDuree 10 ;
+    :aNote "4.7"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_ModelisationBD a owl:NamedIndividual, :Cours ;
+    :aTitre "Modélisation de bases de données relationnelles" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :BasesDeDonnees ;
+    :aPrerequis :Cours_SQLBases ;
+    :enseignePar :Formateur_ElAmrani ;
+    :aDuree 10 ;
+    :aNote "4.1"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_PostgresAvance a owl:NamedIndividual, :Cours ;
+    :aTitre "Administration et optimisation PostgreSQL" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :BasesDeDonnees ;
+    :aPrerequis :Cours_SQLBases ;
+    :enseigneCompetence :CompPostgres ;
+    :enseignePar :Formateur_Chraibi ;
+    :aDuree 14 ;
+    :aNote "4.9"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_SecuriteReseaux a owl:NamedIndividual, :Cours ;
+    :aTitre "Sécurité des réseaux et pare-feu" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :CyberSecurite ;
+    :aPrerequis :Cours_CyberSecuriteBases ;
+    :enseignePar :Formateur_Benali ;
+    :faitPartieDe :Parcours_Cybersecurite ;
+    :aDuree 12 ;
+    :aNote "4.7"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_Cryptographie a owl:NamedIndividual, :Cours ;
+    :aTitre "Cryptographie appliquée" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :CyberSecurite ;
+    :aPrerequis :Cours_CyberSecuriteBases ;
+    :enseigneCompetence :CompCryptographie ;
+    :faitPartieDe :Parcours_Cybersecurite ;
+    :aDuree 10 ;
+    :aNote "4.1"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_EthicalHacking a owl:NamedIndividual, :Cours ;
+    :aTitre "Ethical Hacking et tests d'intrusion" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :CyberSecurite ;
+    :aPrerequis :SecuriteReseaux ;
+    :enseigneCompetence :CompEthicalHacking ;
+    :faitPartieDe :Parcours_Cybersecurite ;
+    :aDuree 18 ;
+    :aNote "4.5"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_AnglaisAffaires a owl:NamedIndividual, :Cours ;
+    :aTitre "Anglais des affaires pour l'IT" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :Langues ;
+    :aPrerequis :Cours_AnglaisTech ;
+    :enseigneCompetence :CompAnglaisAffaires ;
+    :enseignePar :Formateur_ElAmrani ;
+    :aDuree 10 ;
+    :aNote "4.1"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_PrepaTOEIC a owl:NamedIndividual, :Cours ;
+    :aTitre "Préparation au TOEIC" ;
+    :aNiveau :Debutant ;
+    :appartientADomaine :Langues ;
+    :enseignePar :Formateur_Bennis ;
+    :aDuree 12 ;
+    :aNote "4.9"^^xsd:float ;
+    :estGratuit true .
+
+:Cours_CalculDiffIntegral a owl:NamedIndividual, :Cours ;
+    :aTitre "Calcul différentiel et intégral pour la data science" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :Mathematiques ;
+    :aPrerequis :Cours_StatsBase ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 12 ;
+    :aNote "4.8"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_Probabilites a owl:NamedIndividual, :Cours ;
+    :aTitre "Probabilités appliquées" ;
+    :aNiveau :Intermediaire ;
+    :appartientADomaine :Mathematiques ;
+    :aPrerequis :Cours_StatsBase ;
+    :enseigneCompetence :CompProbabilites ;
+    :enseignePar :Formateur_Bennis ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 10 ;
+    :aNote "4.9"^^xsd:float ;
+    :estGratuit false .
+
+:Cours_OptimisationML a owl:NamedIndividual, :Cours ;
+    :aTitre "Optimisation mathématique pour le machine learning" ;
+    :aNiveau :Avance ;
+    :appartientADomaine :Mathematiques ;
+    :aPrerequis :Cours_AlgebreLineaire ;
+    :enseigneCompetence :CompOptimisation ;
+    :enseignePar :Formateur_Chraibi ;
+    :faitPartieDe :Parcours_DataScientist ;
+    :aDuree 12 ;
+    :aNote "4.7"^^xsd:float ;
+    :estGratuit false .

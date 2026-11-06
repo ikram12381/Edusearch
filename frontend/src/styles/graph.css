@@ -1,0 +1,73 @@
+.prereq-empty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  padding: 10px 0;
+}
+.prereq-empty-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); }
+
+.prereq-graph-wrap { width: 100%; }
+.prereq-graph { width: 100%; height: auto; max-height: 420px; overflow: visible; }
+
+.prereq-edge-path { fill: none; stroke: var(--border-strong); stroke-width: 2; transition: stroke 0.2s ease; }
+.prereq-edge.active .prereq-edge-path { stroke: var(--primary); }
+
+.prereq-edge-flow {
+  fill: none; stroke: var(--semantic); stroke-width: 2;
+  stroke-dasharray: 4 8; opacity: 0.7;
+  animation: dash-flow 1.4s linear infinite;
+}
+@keyframes dash-flow { to { stroke-dashoffset: -24; } }
+
+.prereq-edge-label { fill: var(--text-faint); font-size: 10px; text-anchor: middle; font-style: italic; }
+
+.prereq-node { animation: nodeIn 0.4s ease both; cursor: default; }
+.prereq-node.clickable { cursor: pointer; }
+@keyframes nodeIn {
+  from { opacity: 0; transform: translateY(6px) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.prereq-node-rect { fill: var(--surface-muted); stroke: var(--border-strong); stroke-width: 1.5; transition: fill 0.2s ease, stroke 0.2s ease, filter 0.2s ease; }
+.prereq-node.root .prereq-node-rect { fill: var(--primary-soft); stroke: var(--primary); }
+.prereq-node.hovered .prereq-node-rect { stroke: var(--semantic); fill: var(--semantic-soft); }
+
+.prereq-node-title { fill: var(--text); font-size: 12.5px; font-weight: 650; text-anchor: middle; }
+.prereq-node-sub { fill: var(--text-faint); font-size: 9.5px; text-anchor: middle; text-transform: uppercase; letter-spacing: 0.04em; }
+.prereq-hint { font-size: 11.5px; color: var(--text-faint); margin: 8px 0 0; font-style: italic; }
+
+/* ---------- Domain knowledge graph (D3, force-directed) ---------- */
+.domain-graph-wrap {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  overflow: hidden;
+}
+.domain-graph-wrap svg { width: 100%; height: 100%; cursor: grab; }
+.domain-graph-wrap svg:active { cursor: grabbing; }
+
+.domain-node circle {
+  stroke: var(--bg-elevated);
+  stroke-width: 2px;
+  transition: stroke-width 0.15s ease, filter 0.15s ease;
+  cursor: pointer;
+}
+.domain-node:hover circle, .domain-node.selected circle { stroke: var(--primary); stroke-width: 3px; }
+.domain-node text {
+  fill: var(--text);
+  font-size: 11px;
+  font-weight: 600;
+  text-anchor: middle;
+  pointer-events: none;
+}
+.domain-link { stroke: var(--border-strong); stroke-width: 1.6px; }
+
+.domain-graph-hint {
+  position: absolute; bottom: 12px; left: 14px;
+  font-size: 11.5px; color: var(--text-faint); font-style: italic;
+}

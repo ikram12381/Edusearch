@@ -1,0 +1,702 @@
+[
+  {
+    "doc_id": "Cours_PythonBases",
+    "titre": "Python pour débutants",
+    "description": "Apprenez les fondamentaux de la programmation avec Python : variables, boucles, fonctions et structures de données. Aucune expérience de codage requise.",
+    "domaine": "Informatique",
+    "niveau": "Debutant",
+    "duree_heures": 15,
+    "note": 4.6,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_StatsBase",
+    "titre": "Statistiques fondamentales",
+    "description": "Comprendre les moyennes, écarts-types, distributions et tests statistiques de base, avec des applications pratiques en data science.",
+    "domaine": "Mathematiques",
+    "niveau": "Debutant",
+    "duree_heures": 10,
+    "note": 4.3,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_AlgebreLineaire",
+    "titre": "Algèbre linéaire appliquée",
+    "description": "Vecteurs, matrices, valeurs propres et applications en machine learning et infographie.",
+    "domaine": "Mathematiques",
+    "niveau": "Intermediaire",
+    "duree_heures": 12,
+    "note": 4.1,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_IntroML",
+    "titre": "Introduction au Machine Learning",
+    "description": "Découvrez les concepts clés de l'apprentissage automatique : régression, classification, arbres de décision, avec des exercices en Python.",
+    "domaine": "MachineLearning",
+    "niveau": "Debutant",
+    "duree_heures": 20,
+    "note": 4.7,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_IntroDeepLearning",
+    "titre": "Introduction au deep learning",
+    "description": "Comprendre les réseaux de neurones, la rétropropagation et construire vos premiers modèles avec Keras.",
+    "domaine": "DeepLearning",
+    "niveau": "Debutant",
+    "duree_heures": 18,
+    "note": 4.8,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_DeepLearningPyTorch",
+    "titre": "Deep learning avancé avec PyTorch (niveau débutant)",
+    "description": "Construisez des réseaux de neurones profonds avec PyTorch, du CNN au transformer. Optimisation et calcul matriciel avancé.",
+    "domaine": "DeepLearning",
+    "niveau": "Debutant",
+    "duree_heures": 25,
+    "note": 4.4,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_WebBases",
+    "titre": "Les bases du développement web",
+    "description": "HTML, CSS et structure d'une page web moderne. Créez votre premier site de A à Z.",
+    "domaine": "DeveloppementWeb",
+    "niveau": "Debutant",
+    "duree_heures": 14,
+    "note": 4.5,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_JSAvance",
+    "titre": "JavaScript avancé",
+    "description": "Programmation asynchrone, closures, patterns modernes et frameworks JavaScript pour développeurs expérimentés.",
+    "domaine": "DeveloppementWeb",
+    "niveau": "Avance",
+    "duree_heures": 22,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_CoderPourTous",
+    "titre": "Apprendre à coder : les bases",
+    "description": "Une introduction douce à la programmation, sans prérequis, pour comprendre la logique du code avant de choisir un langage.",
+    "domaine": "Informatique",
+    "niveau": "Debutant",
+    "duree_heures": 8,
+    "note": 4.4,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_DataViz",
+    "titre": "Visualisation de données avec Python",
+    "description": "Créer des graphiques clairs et informatifs avec Matplotlib et Seaborn pour explorer vos jeux de données.",
+    "domaine": "DataScience",
+    "niveau": "Intermediaire",
+    "duree_heures": 9,
+    "note": 4.5,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_CloudBases",
+    "titre": "Bases du Cloud Computing",
+    "description": "Comprendre les concepts du cloud : IaaS, PaaS, SaaS, stockage et déploiement d'applications sur des plateformes cloud.",
+    "domaine": "Cloud",
+    "niveau": "Debutant",
+    "duree_heures": 12,
+    "note": 4.3,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_DevOpsIntro",
+    "titre": "Introduction au DevOps",
+    "description": "Culture DevOps, intégration continue, déploiement continu et automatisation des pipelines de développement.",
+    "domaine": "DevOps",
+    "niveau": "Intermediaire",
+    "duree_heures": 16,
+    "note": 4.4,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_DockerKubernetes",
+    "titre": "Docker et Kubernetes en pratique",
+    "description": "Conteneuriser des applications avec Docker et orchestrer leur déploiement à grande échelle avec Kubernetes.",
+    "domaine": "DevOps",
+    "niveau": "Avance",
+    "duree_heures": 20,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_SQLBases",
+    "titre": "Les bases de SQL",
+    "description": "Écrire des requêtes SQL pour interroger, filtrer et agréger des données dans une base relationnelle.",
+    "domaine": "BasesDeDonnees",
+    "niveau": "Debutant",
+    "duree_heures": 10,
+    "note": 4.5,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_NLPIntro",
+    "titre": "Introduction au traitement du langage naturel",
+    "description": "Tokenisation, vectorisation de texte, modèles de langue et premières applications de NLP en Python.",
+    "domaine": "NLP",
+    "niveau": "Intermediaire",
+    "duree_heures": 16,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_CyberSecuriteBases",
+    "titre": "Cybersécurité : les fondamentaux",
+    "description": "Principes de base de la sécurité informatique : menaces courantes, bonnes pratiques et hygiène numérique.",
+    "domaine": "CyberSecurite",
+    "niveau": "Debutant",
+    "duree_heures": 12,
+    "note": 4.4,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_AnglaisTech",
+    "titre": "Anglais technique pour l'informatique",
+    "description": "Vocabulaire et expressions utilisées en développement logiciel, lecture de documentation technique en anglais.",
+    "domaine": "Langues",
+    "niveau": "Debutant",
+    "duree_heures": 8,
+    "note": 4.2,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_GitBases",
+    "titre": "Git et le contrôle de version",
+    "description": "Suivre l'historique d'un projet, créer des branches, fusionner du code et collaborer avec Git et GitHub.",
+    "domaine": "Informatique",
+    "niveau": "Debutant",
+    "duree_heures": 6,
+    "note": 4.7,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_ReactAvance",
+    "titre": "React avancé : hooks et performance",
+    "description": "Hooks personnalisés, gestion d'état complexe, memoization et optimisation du rendu dans une application React.",
+    "domaine": "DeveloppementWeb",
+    "niveau": "Avance",
+    "duree_heures": 18,
+    "note": 4.5,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_StatsAvancees",
+    "titre": "Statistiques avancées et inférence",
+    "description": "Tests d'hypothèses, intervalles de confiance, régression et inférence statistique pour l'analyse de données.",
+    "domaine": "Mathematiques",
+    "niveau": "Avance",
+    "duree_heures": 14,
+    "note": 4.3,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_PythonIntermediaire",
+    "titre": "Python intermédiaire : structures de données et POO",
+    "description": "Approfondissez Python avec les listes, dictionnaires, la programmation orientée objet et les bonnes pratiques.",
+    "domaine": "Informatique",
+    "niveau": "Intermediaire",
+    "duree_heures": 14,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_AutomatisationPython",
+    "titre": "Automatisation de tâches avec Python",
+    "description": "Automatisez des tâches répétitives (fichiers, emails, web scraping) grâce à des scripts Python.",
+    "domaine": "Informatique",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.0,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_Algorithmique",
+    "titre": "Algorithmique et structures de données",
+    "description": "Complexité algorithmique, tris, arbres, graphes : les fondamentaux pour concevoir des programmes efficaces.",
+    "domaine": "Informatique",
+    "niveau": "Intermediaire",
+    "duree_heures": 16,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_LinuxBases",
+    "titre": "Introduction à Linux et à la ligne de commande",
+    "description": "Manipuler un système Linux, naviguer en ligne de commande, gérer fichiers et permissions.",
+    "domaine": "Informatique",
+    "niveau": "Debutant",
+    "duree_heures": 8,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_PythonScriptingAvance",
+    "titre": "Python pour l'automatisation et le scripting avancé",
+    "description": "Scripts robustes, gestion d'erreurs, packaging et publication de modules Python réutilisables.",
+    "domaine": "Informatique",
+    "niveau": "Avance",
+    "duree_heures": 16,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_DataScienceDeAZ",
+    "titre": "Data Science avec Python : de A à Z",
+    "description": "Panorama complet du métier de data scientist : collecte, nettoyage, analyse et restitution des données.",
+    "domaine": "DataScience",
+    "niveau": "Debutant",
+    "duree_heures": 18,
+    "note": 4.8,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_DataWrangling",
+    "titre": "Nettoyage et préparation de données (Data Wrangling)",
+    "description": "Techniques de nettoyage, transformation et fiabilisation des jeux de données réels, souvent imparfaits.",
+    "domaine": "DataScience",
+    "niveau": "Intermediaire",
+    "duree_heures": 12,
+    "note": 4.4,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_PandasNumpy",
+    "titre": "Pandas et NumPy pour l'analyse de données",
+    "description": "Manipulez efficacement des données tabulaires et numériques avec les bibliothèques Python de référence.",
+    "domaine": "DataScience",
+    "niveau": "Intermediaire",
+    "duree_heures": 11,
+    "note": 4.0,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_DataStorytelling",
+    "titre": "Storytelling et communication de données",
+    "description": "Transformez une analyse de données en récit clair et convaincant pour des décideurs non techniques.",
+    "domaine": "DataScience",
+    "niveau": "Intermediaire",
+    "duree_heures": 8,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_DataEngineeringIntro",
+    "titre": "Introduction au Data Engineering",
+    "description": "Pipelines de données, ETL/ELT et bonnes pratiques pour alimenter des projets de data science à l'échelle.",
+    "domaine": "DataScience",
+    "niveau": "Intermediaire",
+    "duree_heures": 14,
+    "note": 4.5,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_BigDataIntro",
+    "titre": "Introduction au Big Data",
+    "description": "Comprendre les enjeux du Big Data (volume, vélocité, variété) et l'écosystème Hadoop.",
+    "domaine": "BigData",
+    "niveau": "Debutant",
+    "duree_heures": 10,
+    "note": 4.0,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_ApacheSpark",
+    "titre": "Apache Spark pour le traitement de données massives",
+    "description": "Traitement distribué de données à grande échelle avec Apache Spark (RDD, DataFrames, Spark SQL).",
+    "domaine": "BigData",
+    "niveau": "Intermediaire",
+    "duree_heures": 16,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_ArchitecturesBigData",
+    "titre": "Architectures Big Data modernes (Data Lake, Data Warehouse)",
+    "description": "Concevoir des architectures de données modernes pour l'analytique et le machine learning à grande échelle.",
+    "domaine": "BigData",
+    "niveau": "Avance",
+    "duree_heures": 18,
+    "note": 4.5,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_PanoramaIA",
+    "titre": "Panorama de l'intelligence artificielle",
+    "description": "Une vue d'ensemble accessible de l'IA : apprentissage automatique, réseaux de neurones, applications concrètes.",
+    "domaine": "IntelligenceArtificielle",
+    "niveau": "Debutant",
+    "duree_heures": 8,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_EthiqueIA",
+    "titre": "Éthique et IA responsable",
+    "description": "Biais algorithmiques, transparence, impacts sociétaux : les enjeux éthiques du déploiement de l'IA.",
+    "domaine": "IntelligenceArtificielle",
+    "niveau": "Debutant",
+    "duree_heures": 6,
+    "note": 4.7,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_IAGenerative",
+    "titre": "IA générative : principes et applications",
+    "description": "Modèles génératifs (texte, image) : comment ils fonctionnent et comment les utiliser en pratique.",
+    "domaine": "IntelligenceArtificielle",
+    "niveau": "Intermediaire",
+    "duree_heures": 12,
+    "note": 4.7,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_MLScikitLearn",
+    "titre": "Machine Learning avec Scikit-learn",
+    "description": "Implémentez régression, classification et clustering avec la bibliothèque Scikit-learn.",
+    "domaine": "MachineLearning",
+    "niveau": "Intermediaire",
+    "duree_heures": 16,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_FeatureEngineering",
+    "titre": "Feature Engineering et sélection de variables",
+    "description": "Créez et sélectionnez les meilleures variables pour améliorer la performance de vos modèles.",
+    "domaine": "MachineLearning",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.3,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_MLOpsIntro",
+    "titre": "Machine Learning en production (MLOps)",
+    "description": "Déployer, versionner et monitorer des modèles de machine learning en environnement de production.",
+    "domaine": "MachineLearning",
+    "niveau": "Avance",
+    "duree_heures": 18,
+    "note": 4.1,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_EnsembleMethods",
+    "titre": "Random Forests et méthodes d'ensemble",
+    "description": "Combinez plusieurs modèles (bagging, boosting) pour améliorer la robustesse de vos prédictions.",
+    "domaine": "MachineLearning",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.9,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_CNNVision",
+    "titre": "Réseaux de neurones convolutifs (CNN) pour la vision par ordinateur",
+    "description": "Comprendre et implémenter des CNN pour la classification et la détection d'images.",
+    "domaine": "DeepLearning",
+    "niveau": "Intermediaire",
+    "duree_heures": 16,
+    "note": 4.3,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_RNNSeriesTemp",
+    "titre": "Réseaux de neurones récurrents (RNN) et séries temporelles",
+    "description": "Modéliser des séquences et séries temporelles avec des RNN, LSTM et GRU.",
+    "domaine": "DeepLearning",
+    "niveau": "Intermediaire",
+    "duree_heures": 14,
+    "note": 4.1,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_DLTensorFlow",
+    "titre": "Deep Learning avec TensorFlow et Keras",
+    "description": "Construisez et entraînez des réseaux de neurones avec TensorFlow/Keras, de bout en bout.",
+    "domaine": "DeepLearning",
+    "niveau": "Intermediaire",
+    "duree_heures": 18,
+    "note": 4.1,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_TransformersLLM",
+    "titre": "Transformers et modèles de langage",
+    "description": "L'architecture Transformer et son rôle central dans les grands modèles de langage modernes.",
+    "domaine": "DeepLearning",
+    "niveau": "Avance",
+    "duree_heures": 20,
+    "note": 4.8,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_NLPSpacyNLTK",
+    "titre": "Traitement du langage naturel avec spaCy et NLTK",
+    "description": "Tokenisation, lemmatisation, reconnaissance d'entités : le NLP appliqué avec des bibliothèques Python.",
+    "domaine": "NLP",
+    "niveau": "Intermediaire",
+    "duree_heures": 12,
+    "note": 4.5,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_Chatbots",
+    "titre": "Chatbots et agents conversationnels",
+    "description": "Concevoir des agents conversationnels : compréhension d'intention, dialogue, intégration.",
+    "domaine": "NLP",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.7,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_LLMUsages",
+    "titre": "Grands modèles de langage (LLM) : principes et usages",
+    "description": "Fonctionnement, forces et limites des LLM, et comment les intégrer dans une application réelle.",
+    "domaine": "NLP",
+    "niveau": "Avance",
+    "duree_heures": 14,
+    "note": 4.7,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_CSSModerne",
+    "titre": "CSS moderne : Flexbox, Grid et responsive design",
+    "description": "Maîtrisez la mise en page moderne du web avec Flexbox et CSS Grid, pour des interfaces responsives.",
+    "domaine": "DeveloppementWeb",
+    "niveau": "Debutant",
+    "duree_heures": 8,
+    "note": 4.5,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_NodeJS",
+    "titre": "Node.js et développement backend JavaScript",
+    "description": "Créez des serveurs et APIs avec Node.js, dans la continuité de JavaScript côté client.",
+    "domaine": "DeveloppementWeb",
+    "niveau": "Intermediaire",
+    "duree_heures": 16,
+    "note": 4.3,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_VueJS",
+    "titre": "Vue.js : construire des interfaces réactives",
+    "description": "Composants, réactivité et gestion d'état avec le framework Vue.js.",
+    "domaine": "DeveloppementWeb",
+    "niveau": "Intermediaire",
+    "duree_heures": 14,
+    "note": 4.5,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_ExpressAPI",
+    "titre": "APIs REST avec Express.js",
+    "description": "Concevez des APIs REST robustes et documentées avec Express.js sur Node.js.",
+    "domaine": "DeveloppementWeb",
+    "niveau": "Intermediaire",
+    "duree_heures": 12,
+    "note": 4.7,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_MERNStack",
+    "titre": "Développement full-stack avec le stack MERN",
+    "description": "MongoDB, Express, React et Node.js : construisez une application web complète de bout en bout.",
+    "domaine": "DeveloppementWeb",
+    "niveau": "Avance",
+    "duree_heures": 24,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_AWSBases",
+    "titre": "AWS pour débutants : les fondamentaux",
+    "description": "Les services essentiels d'Amazon Web Services : EC2, S3, IAM, et les bases de l'architecture cloud.",
+    "domaine": "Cloud",
+    "niveau": "Debutant",
+    "duree_heures": 12,
+    "note": 4.8,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_AzureAdmin",
+    "titre": "Microsoft Azure : administration et services",
+    "description": "Administrer des ressources Azure et déployer des applications dans le cloud Microsoft.",
+    "domaine": "Cloud",
+    "niveau": "Intermediaire",
+    "duree_heures": 14,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_GCPEssentials",
+    "titre": "Google Cloud Platform (GCP) essentials",
+    "description": "Panorama des services Google Cloud Platform pour le calcul, le stockage et les données.",
+    "domaine": "Cloud",
+    "niveau": "Debutant",
+    "duree_heures": 10,
+    "note": 4.0,
+    "gratuit": true
+  },
+  {
+    "doc_id": "Cours_CloudNativeServerless",
+    "titre": "Architectures cloud natives et serverless",
+    "description": "Concevoir des applications scalables avec des architectures serverless et cloud natives.",
+    "domaine": "Cloud",
+    "niveau": "Avance",
+    "duree_heures": 16,
+    "note": 4.3,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_CICD",
+    "titre": "Intégration continue et déploiement continu (CI/CD)",
+    "description": "Mettre en place des pipelines CI/CD pour automatiser tests, build et déploiement.",
+    "domaine": "DevOps",
+    "niveau": "Intermediaire",
+    "duree_heures": 12,
+    "note": 4.1,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_Terraform",
+    "titre": "Infrastructure as Code avec Terraform",
+    "description": "Déclarez et gérez votre infrastructure cloud comme du code avec Terraform.",
+    "domaine": "DevOps",
+    "niveau": "Avance",
+    "duree_heures": 14,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_Monitoring",
+    "titre": "Monitoring et observabilité des systèmes",
+    "description": "Surveillez vos systèmes en production avec Prometheus et Grafana : métriques, alertes, tableaux de bord.",
+    "domaine": "DevOps",
+    "niveau": "Avance",
+    "duree_heures": 12,
+    "note": 4.1,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_MongoDB",
+    "titre": "Bases de données NoSQL avec MongoDB",
+    "description": "Modélisation orientée documents, requêtes et agrégations avec MongoDB.",
+    "domaine": "BasesDeDonnees",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.3,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_ModelisationBD",
+    "titre": "Modélisation de bases de données relationnelles",
+    "description": "Concevoir un schéma relationnel normalisé, robuste et performant.",
+    "domaine": "BasesDeDonnees",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_PostgresAvance",
+    "titre": "Administration et optimisation PostgreSQL",
+    "description": "Index, requêtes complexes, tuning et administration avancée de PostgreSQL.",
+    "domaine": "BasesDeDonnees",
+    "niveau": "Avance",
+    "duree_heures": 14,
+    "note": 4.3,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_SecuriteReseaux",
+    "titre": "Sécurité des réseaux et pare-feu",
+    "description": "Protéger une infrastructure réseau : pare-feu, VPN, segmentation et détection d'intrusion.",
+    "domaine": "CyberSecurite",
+    "niveau": "Intermediaire",
+    "duree_heures": 12,
+    "note": 4.3,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_Cryptographie",
+    "titre": "Cryptographie appliquée",
+    "description": "Chiffrement symétrique/asymétrique, signatures et protocoles cryptographiques utilisés en pratique.",
+    "domaine": "CyberSecurite",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_EthicalHacking",
+    "titre": "Ethical Hacking et tests d'intrusion",
+    "description": "Méthodologie de pentest : reconnaissance, exploitation et rapport, dans un cadre légal et éthique.",
+    "domaine": "CyberSecurite",
+    "niveau": "Avance",
+    "duree_heures": 18,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_AnglaisAffaires",
+    "titre": "Anglais des affaires pour l'IT",
+    "description": "Communiquer à l'écrit et à l'oral en anglais professionnel dans un contexte tech.",
+    "domaine": "Langues",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.8,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_PrepaTOEIC",
+    "titre": "Préparation au TOEIC",
+    "description": "Méthodologie et entraînement intensif pour réussir le test TOEIC.",
+    "domaine": "Langues",
+    "niveau": "Debutant",
+    "duree_heures": 12,
+    "note": 4.6,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_CalculDiffIntegral",
+    "titre": "Calcul différentiel et intégral pour la data science",
+    "description": "Dérivées, intégrales et leur usage concret en machine learning et optimisation.",
+    "domaine": "Mathematiques",
+    "niveau": "Intermediaire",
+    "duree_heures": 12,
+    "note": 4.2,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_Probabilites",
+    "titre": "Probabilités appliquées",
+    "description": "Variables aléatoires, lois de probabilité et raisonnement probabiliste pour la data science.",
+    "domaine": "Mathematiques",
+    "niveau": "Intermediaire",
+    "duree_heures": 10,
+    "note": 4.7,
+    "gratuit": false
+  },
+  {
+    "doc_id": "Cours_OptimisationML",
+    "titre": "Optimisation mathématique pour le machine learning",
+    "description": "Descente de gradient et méthodes d'optimisation au cœur de l'entraînement des modèles.",
+    "domaine": "Mathematiques",
+    "niveau": "Avance",
+    "duree_heures": 12,
+    "note": 4.1,
+    "gratuit": false
+  }
+]
